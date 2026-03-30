@@ -1,193 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amogha Luvina B | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amogha Luvina B</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-        }
 
-        body {
-            background-color: #0f0f0f;
-            color: #eaeaea;
-            line-height: 1.6;
-        }
+*<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-        header {
-            background: #151515;
-            padding: 50px 20px;
-            text-align: center;
-            border-bottom: 1px solid #2a2a2a;
-        }
+body{
+  background: linear-gradient(135deg,#0f172a,#020617);
+  color:#f8fafc;
+}
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 8px;
-        }
+/* CONTAINER */
+.container{
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+}
 
-        header p {
-            color: #b5b5b5;
-            font-size: 1.1rem;
-        }
+/* NAV */
+nav{
+  display:flex;
+  justify-content:center;
+  padding:20px;
+  background:rgba(15,23,42,0.7);
+  backdrop-filter: blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
 
-        section {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
+nav h2{
+  margin-right:30px;
+  font-weight:900;
+  background:linear-gradient(135deg,#38bdf8,#22c55e);
+  -webkit-background-clip:text;
+  color:transparent;
+}
 
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 18px;
-            border-left: 4px solid #ffffff;
-            padding-left: 12px;
-        }
+nav a{
+  margin:0 12px;
+  text-decoration:none;
+  color:#cbd5f5;
+  font-weight:600;
+  transition:0.3s;
+}
 
-        .card {
-            background: #1a1a1a;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-        }
+nav a:hover{
+  color:#38bdf8;
+}
 
-        ul {
-            list-style: none;
-        }
+/* HERO */
+.hero{
+  padding:90px 20px;
+}
 
-        ul li {
-            padding: 8px 0;
-            color: #d0d0d0;
-        }
+.hero h1{
+  font-size:48px;
+  font-weight:900;
+}
 
-        .contact p {
-            margin-bottom: 10px;
-        }
+.hero span{
+  background:linear-gradient(135deg,#38bdf8,#22c55e);
+  -webkit-background-clip:text;
+  color:transparent;
+}
 
-        a {
-            color: #8ab4f8;
-            text-decoration: none;
-        }
+.hero p{
+  margin-top:15px;
+  color:#94a3b8;
+  font-size:18px;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+/* BUTTON */
+.btn{
+  margin-top:25px;
+  padding:12px 24px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#38bdf8,#22c55e);
+  color:#020617;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+}
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #888;
-            font-size: 0.9rem;
-            border-top: 1px solid #2a2a2a;
-        }
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(56,189,248,0.6);
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+/* SECTION */
+section{
+  padding:60px 20px;
+}
+
+h2{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+/* GLASS CARD */
+.glass{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border-radius:18px;
+  padding:25px;
+  margin:20px auto;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  border:1px solid rgba(255,255,255,0.08);
+  max-width:700px;
+  transition:0.3s;
+}
+
+.glass:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 25px rgba(56,189,248,0.3);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* SKILLS */
+.skill{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:20px;
+  margin:6px;
+  font-size:14px;
+  background:rgba(56,189,248,0.15);
+  border:1px solid rgba(56,189,248,0.4);
+  color:#38bdf8;
+  font-weight:600;
+}
+
+/* PROJECT */
+.project{
+  text-align:center;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  color:#64748b;
+}
+</style>
+</style>
+
 </head>
+
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Amogha Luvina B</h1>
-        <p>Student | BCA</p>
-        <p>Bengaluru, India</p>
-    </header>
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <h2>Amogha</h2>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-    <!-- About -->
-    <section>
-        <h2>About Me</h2>
-        <div class="card">
-            <p>
-                My name is Amogha Luvina B, currently studying BCA at Kristu Jayanti University.
-                I belong to a nuclear family. My hobbies are cooking and listening to music.
-                I am passionate about exploring new recipes and experimenting with different cuisines.
-                I also enjoy discovering new genres of music, which helps me relax and stay inspired.
-            </p>
-        </div>
-    </section>
+<!-- HERO -->
+<div class="hero container">
+  <h1>Hello, I'm <span>Amogha Luvina B</span></h1>
+  <p>Frontend Developer • Bengaluru, India</p>
+  <button class="btn">Let's Connect</button>
+</div>
 
-    <!-- Skills -->
-    <section>
-        <h2>Skills</h2>
-        <div class="card">
-            <ul>
-                <li>• Basics of Programming</li>
-                <li>• Problem Solving</li>
-                <li>• Communication Skills</li>
-                <li>• Time Management</li>
-                <li>• Willingness to Learn</li>
-            </ul>
-        </div>
-    </section>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="glass">
+      <p>
+        My name is Amogha Luvina B, currently studying BCA at Kristu Jayanti University.
+        I belong to a nuclear family. My hobbies are cooking and listening to music.
+        I enjoy experimenting with new recipes and exploring different cuisines.
+        Music helps me stay relaxed and inspired.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <!-- Certifications -->
-    <section>
-        <h2>Certifications & Achievements</h2>
-        <div class="card">
-            <ul>
-                <li>• Completed introductory computer applications coursework</li>
-                <li>• Participated in college-level academic activities</li>
-                <li>• Actively learning programming fundamentals</li>
-                <li>• Consistent academic performance in BCA program</li>
-            </ul>
-        </div>
-    </section>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="glass">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Python</span>
+      <span class="skill">UI Design</span>
+    </div>
+  </div>
+</section>
 
-    <!-- Projects -->
-    <section>
-        <h2>Projects</h2>
-        <div class="card">
-            <p>Currently no projects to showcase.</p>
-        </div>
-    </section>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
 
-    <!-- Experience -->
-    <section>
-        <h2>Experience</h2>
-        <div class="card">
-            <p>Fresher (Student)</p>
-        </div>
-    </section>
+    <div class="grid">
+      <div class="glass project">
+        <h3>Portfolio Website</h3>
+        <p>Modern personal portfolio using HTML, CSS and responsive design.</p>
+      </div>
 
-    <!-- Education -->
-    <section>
-        <h2>Education</h2>
-        <div class="card">
-            <p><strong>Degree:</strong> Bachelor of Computer Applications (BCA)</p>
-            <p><strong>College:</strong> Kristu Jayanti University</p>
-            <p><strong>Year of Graduation:</strong> 2028</p>
-        </div>
-    </section>
+      <div class="glass project">
+        <h3>Recipe Finder</h3>
+        <p>Search recipes using API and display results in clean UI.</p>
+      </div>
 
-    <!-- Contact -->
-    <section>
-        <h2>Contact</h2>
-        <div class="card contact">
-            <p><strong>Email:</strong> amoghaluvina13@gmail.com</p>
-            <p><strong>Phone:</strong> 9148870665</p>
-            <p><strong>LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/amogha-luvina-b-2b8514383" target="_blank">
-                    linkedin.com/in/amogha-luvina-b
-                </a>
-            </p>
-        </div>
-    </section>
+      <div class="glass project">
+        <h3>Student Manager</h3>
+        <p>Python-based system to manage student records efficiently.</p>
+      </div>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        © 2026 Amogha Luvina B | Portfolio
-    </footer>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <div class="container">
+    <h2>Education</h2>
+    <div class="glass">
+      <p>
+        Kristu Jayanti University<br>
+        BCA • 2028
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <div class="glass">
+      <p>
+        📍 Bengaluru, India <br>
+        📧 amoghaluvina13@gmail.com <br>
+        📞 9148870665 <br>
+        🔗 <a href="https://www.linkedin.com/in/amogha-luvina-b-2b8514383">LinkedIn</a><br>
+        💻 <a href="https://github.com/25bcab09-code">GitHub</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Amogha Luvina B
+</footer>
 
 </body>
 </html>
-
