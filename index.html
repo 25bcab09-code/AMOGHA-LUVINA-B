@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amogha Luvina B</title>
 
-
-*<style>
+<style>
 *{
   margin:0;
   padding:0;
@@ -149,13 +148,66 @@ h2{
   text-align:center;
 }
 
+/* ===== CONTACT FORM CSS (ADDED ONLY THIS) ===== */
+#contactForm{
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+#contactForm input,
+#contactForm textarea{
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder{
+  color: #94a3b8;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus{
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56,189,248,0.5);
+}
+
+#contactForm button{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg,#38bdf8,#22c55e);
+  color: #020617;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contactForm button:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(56,189,248,0.6);
+}
+
 /* FOOTER */
 footer{
   text-align:center;
   padding:25px;
   color:#64748b;
 }
-</style>
 </style>
 
 </head>
@@ -247,6 +299,13 @@ footer{
   </div>
 </section>
 
+<form id="contactForm">
+  <input type="text" id="name" placeholder="Name" required><br>
+  <input type="email" id="email" placeholder="Email" required><br>
+  <textarea id="message" placeholder="Message"></textarea><br>
+  <button type="submit">Send</button>
+</form>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
@@ -266,6 +325,27 @@ footer{
 <footer>
   © 2026 Amogha Luvina B
 </footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const data = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  };
+
+  const res = await fetch('/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  });
+
+  const msg = await res.text();
+  alert(msg);
+});
+</script>
 
 </body>
 </html>
