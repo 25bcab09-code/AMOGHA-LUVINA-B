@@ -336,14 +336,23 @@ document.getElementById("contactForm").addEventListener("submit", async function
     message: document.getElementById("message").value
   };
 
-  const res = await fetch('/contact', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  });
+  try {
+    // ✅ Works for both localhost AND Render
+    const res = await fetch(window.location.origin + '/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
 
-  const msg = await res.text();
-  alert(msg);
+    const msg = await res.text();
+    alert(msg);
+
+    // ✅ Clear form after submit
+    document.getElementById("contactForm").reset();
+
+  } catch (error) {
+    alert("❌ Error sending message");
+  }
 });
 </script>
 
